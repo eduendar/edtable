@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ED Table</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="table"></div>
+    <script src="edtable.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var target = document.getElementById('table');
+
+        let options = {
+            title: "Meine Tabelle",
+            col: [
+                {field:"firstname",label:"Vorname",col:"150px"},
+                {field:"lastname",label:"Nachname",col:"auto"},
+                {field:"age",label:"Alter",col:"80px"}
+            ]
+        };
+
+        edtable.init(target,"data.json",options);
+
+    });
+</script>
+</body>
+</html>
